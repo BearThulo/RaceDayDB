@@ -1,0 +1,12 @@
+C:\Users\moren\source\repos\RACEDAY.API\RACEDAY.CONTRACTS\bin\Debug\net10.0\RACEDAY.CONTRACTS.deps.json
+C:\Users\moren\source\repos\RACEDAY.API\RACEDAY.CONTRACTS\bin\Debug\net10.0\RACEDAY.CONTRACTS.dll
+C:\Users\moren\source\repos\RACEDAY.API\RACEDAY.CONTRACTS\bin\Debug\net10.0\RACEDAY.CONTRACTS.pdb
+C:\Users\moren\source\repos\RACEDAY.API\RACEDAY.CONTRACTS\obj\Debug\net10.0\RACEDAY.CONTRACTS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\moren\source\repos\RACEDAY.API\RACEDAY.CONTRACTS\obj\Debug\net10.0\RACEDAY.CONTRACTS.AssemblyInfoInputs.cache
+C:\Users\moren\source\repos\RACEDAY.API\RACEDAY.CONTRACTS\obj\Debug\net10.0\RACEDAY.CONTRACTS.AssemblyInfo.cs
+C:\Users\moren\source\repos\RACEDAY.API\RACEDAY.CONTRACTS\obj\Debug\net10.0\RACEDAY.CONTRACTS.csproj.CoreCompileInputs.cache
+C:\Users\moren\source\repos\RACEDAY.API\RACEDAY.CONTRACTS\obj\Debug\net10.0\RACEDAY.CONTRACTS.dll
+C:\Users\moren\source\repos\RACEDAY.API\RACEDAY.CONTRACTS\obj\Debug\net10.0\refint\RACEDAY.CONTRACTS.dll
+C:\Users\moren\source\repos\RACEDAY.API\RACEDAY.CONTRACTS\obj\Debug\net10.0\RACEDAY.CONTRACTS.pdb
+C:\Users\moren\source\repos\RACEDAY.API\RACEDAY.CONTRACTS\obj\Debug\net10.0\ref\RACEDAY.CONTRACTS.dll
+C:\Users\moren\source\repos\RACEDAY.API\RACEDAY.CONTRACTS\obj\Debug\net10.0\RACEDAY..A495EBC7.Up2Date
