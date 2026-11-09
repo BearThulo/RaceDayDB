@@ -1,0 +1,136 @@
+﻿<
+@using Microsoft.AspNetCore.Http
+
+@{
+    var userId = Context.Session.GetInt32("UserId");
+    var role = Context.Session.GetString("Role");
+    var displayName = Context.Session.GetString("DisplayName");
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] - RaceDay</title>
+
+    <link rel="stylesheet"
+          href="~/css/site.css"
+          asp-append-version="true" />
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="nav-shell">
+
+            <a class="brand"
+               asp-controller="Home"
+               asp-action="Index">
+
+                <img src="~/images/raceday-logo.svg"
+                     alt="RaceDay logo" />
+
+                <span>RaceDay</span>
+            </a>
+
+            <button class="nav-toggle"
+                    type="button"
+                    aria-label="Toggle navigation"
+                    aria-controls="main-nav"
+                    aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="nav-links" id="main-nav">
+
+                <a asp-controller="Home"
+                   asp-action="Index">Home</a>
+
+                @if (userId == null)
+                {
+                    <a asp-controller="Auth"
+                       asp-action="Login">Login</a>
+
+                    <a asp-controller="Auth"
+                       asp-action="Register"
+                       class="nav-register">
+                        Register
+                    </a>
+                }
+                else if (string.Equals(
+                    role, "Organiser",
+                    StringComparison.OrdinalIgnoreCase))
+                {
+                    <a asp-controller="Organiser"
+                       asp-action="Index">Dashboard</a>
+
+                    <a asp-controller="Organiser"
+                       asp-action="Events">Events</a>
+
+                    <a asp-controller="Organiser"
+                       asp-action="Categories">Categories</a>
+
+                    <a asp-controller="Organiser"
+                       asp-action="Enrolments">Enrolments</a>
+
+                    <a asp-controller="Organiser"
+                       asp-action="Results">Results</a>
+                }
+                else if (string.Equals(
+                    role, "Participant",
+                    StringComparison.OrdinalIgnoreCase))
+                {
+                    <a asp-controller="Participant"
+                       asp-action="Index">Events</a>
+
+                    <a asp-controller="Participant"
+                       asp-action="MyEvents">My Events</a>
+
+                    <a asp-controller="Participant"
+                       asp-action="MyResults">My Results</a>
+
+                    <a asp-controller="Participant"
+                       asp-action="Profile">Profile</a>
+                }
+
+                @if (userId != null)
+                {
+                    <div class="user-menu">
+                        <span>@displayName</span>
+
+                        <form asp-controller="Auth"
+                              asp-action="Logout"
+                              method="post">
+
+                            <button type="submit"
+                                    class="logout-btn">
+                                Logout
+                            </button>
+
+                        </form>
+                    </div>
+                }
+
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        @RenderBody()
+    </main>
+
+    <footer class="site-footer">
+        <p>© @DateTime.Now.Year RaceDay. All rights reserved.</p>
+        <span>Run. Walk. Cycle. Be part of the journey.</span>
+    </footer>
+
+    <script src="~/js/site.js"
+            asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>
+
